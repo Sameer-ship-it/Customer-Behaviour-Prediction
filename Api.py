@@ -68,7 +68,7 @@ def predict_behaviour(data: UserInput):
     # Applying scaler 
     scaled_input = scaler.transform(model_features)
 
-    # DEBUG: check scaled input
+    # check scaled input
     print("SCALED INPUT:", scaled_input)
 
     # Safety: replace NaN / inf in scaled_input
@@ -76,8 +76,6 @@ def predict_behaviour(data: UserInput):
 
     # Predict probability
     fraud_probability = model.predict_proba(scaled_input)[0][1]
-    if np.isnan(fraud_probability) or np.isinf(fraud_probability):
-        fraud_probability = 0.0
 
     # Risk score rounding off
     risk_score = round(fraud_probability * 100, 2)
@@ -101,8 +99,5 @@ def predict_behaviour(data: UserInput):
     "risk_level": risk_level,
     "decision": decision
     }
-
-    
-
-
-
+ 
+   
