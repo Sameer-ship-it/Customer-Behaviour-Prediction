@@ -170,7 +170,3 @@ Computer Science & Machine Learning Projects
 
 ---
 
-If you'd like, I can also:
-- add badges (build/pyright/coverage)
-- add a short GIF/screenshots of the Streamlit UI
-- update Api.py/Streamlit.py to match the model filename in the repo
